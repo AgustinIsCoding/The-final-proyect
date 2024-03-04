@@ -2,7 +2,7 @@
   "name": "proyecto-f",
   "version": "1.0.0",
   "description": "",
-  "main": "app/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "npx nodemon index.js"

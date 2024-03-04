@@ -42,7 +42,11 @@ async function login(req,res){
     path: "/"
   }
   res.cookie("jwt", token, cookieOption);
-  res.send({status:"ok",message:"Usuario loggeado", redirect:"/admin"})
+  if(usuarioARevisar.role=="admin"){
+    res.send({status:"ok",message:"Usuario loggeado", redirect:"/manager"})
+  }else if(usuarioARevisar.role=="user"){
+    res.send({status:"ok",message:"Usuario loggeado", redirect:"/admin"})
+  }
 }
 
 
