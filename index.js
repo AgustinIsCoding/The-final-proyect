@@ -20,7 +20,6 @@ app.use(cookieParser())
 //rutas
 
 app.use("/assets", express.static(path.resolve(__dirname,"assets")))
-app.use("/images", express.static(path.resolve(__dirname,"images")))
 //poner authorization dependiendo del role
 app.get("/login",authorization.soloPublico,(req, res)=> res.sendFile(__dirname + "/app/pages/login.html"))
 app.get("/home",authorization.nuncaHome,(req, res)=> res.sendFile(__dirname + "/index.html"))
